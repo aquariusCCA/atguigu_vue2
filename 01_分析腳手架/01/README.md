@@ -1,5 +1,5 @@
 # 筆記
-
+``
 ├── node_modules 
 ├── public
 │   ├── favicon.ico: 页签图标
@@ -16,3 +16,4 @@
 ├── package.json: 应用包配置文件 
 ├── README.md: 应用描述文件
 ├── package-lock.json：包版本控制文件
+``
