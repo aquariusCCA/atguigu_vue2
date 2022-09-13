@@ -43,7 +43,7 @@ export default {
   },
   // 開發心法: 數據在哪裡，操作數據的方法就在哪裡 !!!
   methods:{
-    //添加的todo
+    // 添加的 todo
     addTodo(todo){
       // unshift(): 可向数组的开头添加一个或更多元素，并返回新的长度。
       this.todos.unshift(todo);

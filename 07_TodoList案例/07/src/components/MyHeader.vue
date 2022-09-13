@@ -1,5 +1,9 @@
 <template>
   <div class="todo-header">
+    <!-- 
+      @keyup: 綁定鍵盤事件。
+      enter 修飾符: 當用戶按下回車鍵才會觸發鍵盤事件。 
+    -->
     <input type="text" placeholder="請輸入你的任務名稱，按回車鍵確認。" v-model="title" @keyup.enter="add"/>
   </div>
 </template>
@@ -10,7 +14,7 @@
 import { nanoid } from 'nanoid';
 
 export default {
-  // 注意不管是你写的 data 也还还是 methods 也好，甚至是 computed 计算属性也好，都会出现在组件事例对象 vc 身上
+  // 注意不管是你写的 data 也好还是 methods 也好，甚至是 computed 计算属性也好，都会出现在组件事例对象 vc 身上
   // 属性值不能重名
   name: "MyHeader",
   data(){
@@ -26,16 +30,17 @@ export default {
       // 數據校驗
       // trim(): 去除前後的空格。
       if(!this.title.trim()) {
-        alert('代办事项不能为空')
-        return; //输入的代办事项为空则不走下面流程
+        alert('代辦事項不能為空')
+        return; // 输入的代办事项为空则不走下面流程
       }
 
       const todoObj = {
         id: nanoid(), // 獲取唯一的字符串。
         title: this.title,
-        done: false
+        done: false // 既然是剛新增的代辦事項，那就表示還沒有完成(false)。
       }
 
+      // 調用 App 組件中的 addTodo() 函數
       this.addTodo(todoObj)
 
       // 清空輸入的數據
