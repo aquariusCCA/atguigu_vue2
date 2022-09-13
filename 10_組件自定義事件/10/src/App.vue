@@ -26,9 +26,6 @@
     -->
     <Student ref="student" @click.native="show" />
 
-    <!-- once代表改事件只执行一次 -->
-    <!-- <Student @personalEvent="getStudentName" @demo="demo"/> -->
-
   </div>
 </template>
 
