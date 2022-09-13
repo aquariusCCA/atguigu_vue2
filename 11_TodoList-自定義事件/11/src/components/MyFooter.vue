@@ -3,12 +3,15 @@
   <div class="todo-footer" v-show="total">
     <label>
       <!--这里也可用v-model来替代，此时不需要计算属性了-->
-<!--      <input type="checkbox" :checked="isAll" @change="checkAll"/>-->
+      <!--<input type="checkbox" :checked="isAll" @change="checkAll"/>-->
+
       <input type="checkbox" v-model="isAll"/>
     </label>
+
     <span>
        <span>已完成{{ doneTotal }}</span> / 全部{{total}}
     </span>
+
     <button class="btn btn-danger" @click="clearAll">清除已完成任务</button>
   </div>
 </template>
@@ -26,7 +29,6 @@ export default {
         //隐式类型转换
         return todoTotal + todo.done;
       }, 0);
-      // return this.todos.filter(todo => todo.done).length;
     },
     isAll:{
       get(){
