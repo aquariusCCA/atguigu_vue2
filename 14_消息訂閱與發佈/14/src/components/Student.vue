@@ -23,7 +23,7 @@ export default {
     sendStudentName(){
       // this.$bus.$emit('hello', this.name);
 
-      // 发布消息
+      // 发布消息 (發布消息可以理解為是觸發事件)
       pubsub.publish('hello', this.name);
     }
   },

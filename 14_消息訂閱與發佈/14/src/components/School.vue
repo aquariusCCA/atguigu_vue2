@@ -27,7 +27,7 @@ export default {
     // })
 
 
-    // 订阅消息，隔空对讲机喊话
+    // 订阅消息，隔空对讲机喊话 (訂閱消息，可以理解為是綁定事件)
     this.pubId = pubsub.subscribe('hello',  (name, msg) => { // name 是消息名，msg 才是我們要傳遞的訊息。
       // 注意這裡要寫箭頭函數，因為這樣 this 就會丟失；就會往外找，
       // 此時就會找到 vm，即 this => vm。
@@ -38,7 +38,7 @@ export default {
   beforeDestroy() {
     // this.$bus.$off('hello'); //销毁解绑
 
-    //取消订阅
+    // 取消订阅 (取消訂閱可以理解為是取消綁定事件)
     pubsub.unsubscribe(this.pubId); 
   }
 }
