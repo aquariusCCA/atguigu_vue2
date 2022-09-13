@@ -12,7 +12,7 @@ new Vue({
   el: '#app',
   render: h => h(App),
   beforeCreate() {
-    // 事件总线
+    // 在 Vue 的原型對象中安裝事件總線。
     Vue.prototype.$bus = this;
   }
 });
