@@ -14,10 +14,10 @@
 
 <body>
     <h2>localstorage</h2>
-    <button onclick="saveData()">点我保存一个数据</button>
-    <button onclick="readData()">点我读取一个数据</button>
-    <button onclick="deleteData()">点我删除一个数据</button>
-    <button onclick="removeAllData()">清空所有数据</button>
+    <button onclick="saveData()">點我保存一個數據</button>
+    <button onclick="readData()">點我讀取一個數據</button>
+    <button onclick="deleteData()">點我刪除一個數據</button>
+    <button onclick="removeAllData()">清空所有數據</button>
 </body>
 
 <script type="text/javascript">
@@ -35,8 +35,11 @@
 
     function readData() {
         console.log(localStorage.getItem('msg1'))
+
         console.log(JSON.parse(localStorage.getItem('msg2')));
-        console.log(localStorage.getItem('text')); //读不出来就是null Json.parse(null)仍然是null注意
+
+        // 注意 !!! 读不出来就是 null，Json.parse(null)仍然是null。
+        console.log(localStorage.getItem('text')); 
     }
 
     function deleteData() {
