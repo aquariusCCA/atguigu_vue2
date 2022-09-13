@@ -41,6 +41,8 @@ export default {
       //   {id: '003', title: '打代码', done: false}
       // ]
 
+
+      // 跟以前版本多了如下的代碼。
       // 數組的初始值是空數組，所以我們這裡需要做一個判斷。
       // 如果數組為真我就用，數組為假我就不用。(因為 null都会转换为 false)
       todos:JSON.parse(localStorage.getItem('todos')) || []
@@ -66,15 +68,15 @@ export default {
       this.todos = this.todos.filter(todo => !todo.done)
     }
   },
-  watch:{
-    //深度监视
-    todos:{
-      // 深度监视当我监视数组中的对象的某个属性的变化它也会产生反应
+  watch:{ // 跟之前的版本多了這個配置項。
+    //深度监视 todos
+    todos: {
+      // 深度監視: 當我監視數組中的對象的某個屬性的變化，他也會產生反應。
       deep: true, 
       handler(newValue) {
         // 本地存储存的是 key 和 value 都是字符串，
-        // 所以我們需要將 todos 轉換成 JSON字符串。
-        localStorage.setItem("todos", JSON.stringify(newValue)) // 数据存放在本地存储中
+        // 所以我們需要將 todos 數組轉換成 JSON字符串。
+        localStorage.setItem("todos", JSON.stringify(newValue)) // 將數據存放在本地存儲中
       }
     },
   }

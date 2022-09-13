@@ -1,6 +1,6 @@
 <template>
   <div class="todo-header">
-    <input type="text" placeholder="请输入你的任务名称，按回车键确认" v-model="title" @keyup.enter="add"/>
+    <input type="text" placeholder="請輸入你的任務名稱，按回車鍵確認" v-model="title" @keyup.enter="add"/>
   </div>
 </template>
 
@@ -19,17 +19,22 @@ export default {
     add(){
       //将用户的输入包装成一个todo对象
       console.log(this.title)
+
       if(!this.title.trim()) {
-        alert('代办事项不能为空')
+        alert('代辦事項不能為空')
         return; //输入的代办事项为空则不走下面流程
       }
+
       const todoObj = {
         id: nanoid(),
         title: this.title,
-        done:false
+        done: false
       }
-      // console.log(todoObj);
+
+      // 將新增的代辦事項添加到數組中
       this.addTodo(todoObj)
+
+      // 清空輸入框的數據。
       this.title = '';
     }
   },
