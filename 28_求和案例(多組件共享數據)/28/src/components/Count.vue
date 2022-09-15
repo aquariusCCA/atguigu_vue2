@@ -36,10 +36,10 @@
 		},
 		methods: {
 			//借助 mapMutations 生成对应的方法，方法中会调用 commit 去联系 mutations(对象写法)
-			...mapMutations({increment:'JIA',decrement:'JIAN'}),
+			...mapMutations({increment:'JIA', decrement:'JIAN'}),
 
 			//借助 mapActions 生成对应的方法，方法中会调用 dispatch 去联系 actions (对象写法)
-			...mapActions({incrementOdd:'jiaOdd',incrementWait:'jiaWait'})
+			...mapActions({incrementOdd:'jiaOdd', incrementWait:'jiaWait'})
 		},
 		mounted() {
 			// const x = mapState({he:'sum',xuexiao:'school',xueke:'subject'})

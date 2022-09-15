@@ -2,13 +2,17 @@
 	<ul>
 		<li>消息编号：{{id}}</li>
 		<li>消息标题：{{title}}</li>
+		<li>a：{{a}}</li>
+		<li>b：{{b}}</li>
+		<li>接收 query 參數 id：{{$route.query.id}}</li>
+		<li>接收 query 參數 title：{{$route.query.title}}</li>
 	</ul>
 </template>
 
 <script>
 	export default {
 		name:'Detail',
-		props:['id','title'],
+		props:['id', 'title', 'a', 'b'],
 		computed: {
 			// id(){
 			// 	return this.$route.query.id

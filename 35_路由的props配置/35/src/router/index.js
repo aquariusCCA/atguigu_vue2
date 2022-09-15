@@ -14,24 +14,24 @@ export default new VueRouter({
 		{
 			name:'guanyu',
 			path:'/about',
-			component:About
+			component: About
 		},
 		{
 			path:'/home',
-			component:Home,
+			component: Home,
 			children:[
 				{
 					path:'news',
-					component:News,
+					component: News,
 				},
 				{
 					path:'message',
-					component:Message,
+					component: Message,
 					children:[
 						{
 							name:'xiangqing',
 							path:'detail/:id/:title',
-							component:Detail,
+							component: Detail,
 
 							// props 的第一种写法
 							// 值为对象，该对象中的所有 key-value 都会以 props 的形式传给 Detail 组件。
