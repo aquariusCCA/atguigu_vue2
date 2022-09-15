@@ -55,7 +55,8 @@
 			// 借助 mapState 生成计算属性，从 state 中读取数据。（对象写法）
 			// 因為 mapState 生成的是對象，而 computed 配置項不能直接編寫對象，
 			// 所以我們使用 ... 將對象中的屬性，一一列舉出來。
-			// ...mapState({he:'sum',xuexiao:'school',xueke:'subject'}), // 不同名的狀態下。
+			// he: 'sum'  ->  計算屬性名稱: $store.state.sum
+			// ...mapState({he:'sum', xuexiao:'school', xueke:'subject'}), // 不同名的狀態下。
 
 
 			// 借助 mapState 生成计算属性，从 state 中读取数据。（数组写法）
@@ -69,7 +70,8 @@
 			}, */
 
 			// 借助 mapGetters 生成计算属性，从 getters 中读取数据。（对象写法）
-			// ...mapGetters({bigSum:'bigSum'})
+			// bigSum: 'bigSum' -> 計算屬性名稱: $store.getters.bigSum
+			// ...mapGetters({bigSum: 'bigSum'})
 			
 			//借助 mapGetters 生成计算属性，从 getters 中读取数据。（数组写法）
 			...mapGetters(['bigSum'])

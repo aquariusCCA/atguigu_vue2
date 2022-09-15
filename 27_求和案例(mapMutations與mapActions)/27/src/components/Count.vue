@@ -58,10 +58,11 @@
 			// increment 對應的是方法名、'JIA' 對應的是 commit() 函數中的第一個參數。
 			// 自動生成的代碼並不知道 this.n 是甚麼東西，所以 Vuex 幫我們傳入的是 event(事件對象)
 			// 如果想要獲取 n -> <button @click="increment(n)">+</button>
+			// increment: 'JIA' -> 方法名: mutations 中的方法
 			...mapMutations({increment:'JIA', decrement:'JIAN'}),
 
 			// 借助 mapMutations 生成对应的方法，方法中会调用 commit 去联系 mutations(数组写法)
-			// ...mapMutations(['JIA','JIAN']),
+			// ...mapMutations(['JIA', 'JIAN']),
 
 			/* ************************************************* */
 
@@ -74,6 +75,7 @@
 			}, */
 
 			// 借助 mapActions 生成对应的方法，方法中会调用 dispatch 去联系 actions (对象写法)
+			// incrementOdd:'jiaOdd'  ->  方法名: actions 中的方法
 			...mapActions({incrementOdd:'jiaOdd', incrementWait:'jiaWait'})
 
 			// 借助 mapActions 生成对应的方法，方法中会调用 dispatch 去联系 actions (数组写法)
